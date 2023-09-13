@@ -1,0 +1,320 @@
+html
+{
+    /* background: repeating-linear-gradient(20deg,#F3696E,#F89999,#F74C06);  */
+    background: linear-gradient(20deg ,#FD830D,#E9F4FF,#5db3f5);
+    background-size: 100% 100%;
+    scroll-behavior: smooth;
+    font-size: 1.1325rem;
+    display: relative;
+    /* background: linear-gradient(345deg,#FD830D,#E9F4FF,#F3696E); */
+}
+
+html a
+{
+    text-decoration: none;
+    color: #A23BEC;
+}
+
+html a:hover
+{
+  color: black;
+}
+
+body::-webkit-scrollbar
+{
+    width: 0px;
+}
+
+#header{
+    width: 100%;
+    height: 100%;
+}
+
+.nav img
+{
+    padding: 2rem;
+}
+
+.content
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: 4.25em;
+}
+
+.real_content
+{
+    font-size: 1.2em;
+    font-style: italic;
+    text-transform: uppercase;
+    font-family: 'Eczar', serif;
+}
+
+#my_bio
+{
+    display: flex;
+    justify-content: center;
+}
+
+
+.detail
+{
+    padding: 2.5rem;
+    margin-top: 3rem;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Eczar', serif;
+    border:2px outset;
+    background-color: #8AE3A8;
+    border-radius: 55px 11px 55px 11px;
+}
+
+.detail:hover{
+    border:2px outset;
+    border-radius: 55px 11px 55px 11px;
+    box-shadow:5px 14.5px #6c6b6b;
+    transition: all 0.3s ease-in-out;
+    background-color:#f6efec;
+    transition: all 1s ease-in;
+}
+
+#pro_holder
+{
+    width: 100%;
+    height: 99.9%;
+}
+
+#pro
+{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    position: relative;
+    font-family: 'Agdasima', sans-serif;
+    font-family: 'Ballet', cursive;
+    font-family: 'Eczar', serif;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Tektur', cursive;
+}
+
+.pbl1
+{
+    height: 6em; 
+    width: 7em;
+}
+
+.pbl1:hover
+{
+    height: 6.5em;
+    width: 7.5rem;
+    transition: all 0.5s ease-in-out;
+    filter:drop-shadow( 10px 9px 15px #888888)
+}
+
+.pbl2
+{
+    height: 6em; 
+    width: 7em;
+}
+
+.pbl2:hover
+{
+    height: 6.5em;
+    width: 7.5em;
+    transition: all 0.5s ease-in-out;
+    filter:drop-shadow( 10px 9px 15px #888888)
+}
+
+
+.cpp
+{
+    text-align: center;
+    margin-right: 1em;
+    height: 11em;
+    width: 20em;
+}
+
+.python
+{
+    margin-left: 1em;
+    text-align: center;
+    height: 11em;
+    width: 20em;
+}    
+
+.skill_holder
+{ 
+   display: flex;
+   flex-wrap: nowrap;
+   justify-content: center;
+}
+
+.skillbar{
+    background-color: #888888;
+    height: 8.5rem;
+    border: 2px solid;
+    padding: 0.2rem;
+    margin: 0.5rem;
+}
+
+.skills{
+   text-align: center;
+   color: white;
+}
+
+.topic{
+    margin-top: 1rem;
+    text-transform: uppercase;
+    font-family: 'Ballet', cursive;
+    font-family: 'Eczar', serif;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Tektur', cursive;
+    text-align: center;
+}
+
+.htmll
+{
+    height: 5rem ;
+    width: 3.6rem;
+    background-color: #04AA6D;
+    margin-top: 1.4rem;
+}
+
+.CSS
+{
+    height: 3.5rem ;
+    width: 3.6rem;
+    background-color: #04AA6D;
+    margin-top: 3rem;
+    
+}
+
+.C
+{
+    height: 4rem;
+    width: 3.6rem;
+    background-color: #04AA6D;
+    margin-top: 2.4rem;
+    margin-left:0.2rem;
+}
+
+.Pythonn
+{
+    height: 1.9rem ;
+    background-color: #04AA6D;
+    margin-top:4.6rem;
+}
+
+
+#pic marquee
+{
+    border: 6px ridge;
+    padding: 1rem;
+    margin-left:25%;
+    margin-right: 25%;
+}
+
+
+form
+{
+    font-family: 'Ballet', cursive;
+    font-family: 'Eczar', serif;
+    
+}
+
+fieldset{
+    border-radius: 50px;
+    box-shadow: 2px 4px#215240;
+}
+
+form legend{
+    font-size: 1.72rem;
+    padding: 1.5rem; 
+}
+
+form input
+{
+    border-radius:5px ;
+    box-shadow: 2px 4px #888888;
+    border-color: antiquewhite;
+    font-family: 'Agdasima', sans-serif;
+    font-family: 'Ballet', cursive;
+    font-family: 'Eczar', serif;
+    font-family: 'Edu VIC WA NT Beginner', cursive;
+    font-family: 'Pacifico', cursive;
+    font-family: 'Tektur', cursive;
+}
+
+input[type=text]
+{
+    width: 98%;
+    padding:0.5rem;
+    margin: 0.9rem;
+}
+
+.other_detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    
+}
+
+.next_detail{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+input[type="text"],[type="number"],[type="email"]::placeholder
+{ 
+  text-align: center;
+}
+
+
+textarea::placeholder{
+    text-align: center;
+}
+
+input[type=submit] {
+    background-color: #215240;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 45%;
+  }
+  
+  input[type=submit]:hover {
+    transition: all 0.3s ease-in;
+    background-color: tomato;
+  }
+
+
+textarea
+{
+    border-radius: 25px;
+}
+
+textarea::placeholder{
+    justify-content: center;
+    text-align: center;
+}
+#footer
+{
+  display: block;
+  /* background:  rgb(53, 78, 220); */
+  padding: 5%;
+  border-radius: 40px;
+  background: linear-gradient(20deg ,#FD830D,#E9F4FF,#5db3f5,#5db3f5,#E9F4FF,#FD830D);
+}
+
+.social
+{
+    padding-top: 1rem;
+} 
+
+/* ,rgb(228, 126, 30) */
