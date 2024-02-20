@@ -159,51 +159,56 @@
 
 
         <div id="form">
-            <form>
+            <!-- <form action="connect.php" method="post"> -->
+                <form>
                  <fieldset>
                     <legend style="font-family: 'Ballet', cursive;  font-family: 'Eczar', serif; font-family: 'Tektur', cursive; text-transform: uppercase; ">Contact me</legend>
            
-                        <label for="fname">First Name:</label>
-                        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                        <label for="firstname">First Name:</label>
+                        <input type="text" id="fname" name="fname" placeholder="Your name.." required>
                 
-                        <label for="lname">Last Name:</label>
-                        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                        <label for="lastname">Last Name:</label>
+                        <input type="text" id="lname" name="lname" placeholder="Your last name.." required>
             
                   
                         <div class="other_detail">
 
                             <div class="dob" >
                                 <label for="DOB">Date of birth:</label>
-                                <input type="date" id="dob" name="dob" placeholder="2023/08/08">
+                                <input type="date" id="dob" name="dob" placeholder="2023/08/08" required>
                             </div>
     
-                             <div class="gender">
-                                <label for="Gender">Gender</label> 
+                             <!-- <div class="gender" style="border-radius: 100%;">
+                                <label for="Gender" id="gender">Gender</label> 
     
-                                <input type="radio" id="male" name="male" value="male">
-                                <label for="male">Male</label>                   
-                            
-                                <input type="radio" id="female" name="female" value="female">
-                                <label for="female">Female</label>
-                             </div>
+                                <label>
+                                    <input type="radio" name="type" value="1" id ="male">
+                                    Male
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="type" value="2" id="female">
+                                    Female
+                                </label>
+                             </div> -->
                         
                         </div>
                         
                         <div class="add">
                             <label for="address">Address:</label>
-                            <input type="text" id="add" name="add" placeholder="88 street,Californiya,USA">
+                            <input type="text" id="address" name="address" placeholder="88 street,Californiya,USA" required>
                         </div>
     
                         <div class="next_detail">
 
                              <div class="phone">
                                 <label for="number">Mobile No:</label>
-                                <input type="number" id="no" name="no" placeholder="9849xxxxxx">
+                                <input type="number" id="no" name="no" placeholder="9849xxxxxx" required>
                              </div>
     
                              <div class="email">
                                 <label for="e-mail">Email:</label>
-                                <input type="email" id="mail" name="mail" placeholder="abcdef@gmail.com">
+                                <input type="email" id="mail" name="mail" placeholder="abcdef@gmail.com" required>
                              </div>
     
                         </div>
@@ -212,11 +217,12 @@
                         <div class="message">
 
                             <label for="message"><center>Message</center></label>
-                            <center><textarea name="textarea" id="message" cols="30" rows="5"  style="font-family: 'Eczar', serif;" placeholder="Message for me from your side"></textarea></center>
+                            <center><textarea name="message" id="msg" cols="30" rows="5"  style="font-family: 'Eczar', serif;" placeholder="Message for me from your side" required ></textarea></center>
                                                   
                         </div>
 
-                        <br><input type="submit" value="Submit" onclick="button()"> 
+                        <br>
+                        <input type="submit" value="Submit" id="Submit" onclick="button()"> 
 
                 </fieldset>
             </form>
@@ -253,6 +259,42 @@
         </div>
 
     </div>
+     <script type="module">
+        
+          // Import the functions you need from the SDKs you need
+            import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js";
+            import { getDatabase,ref,set,get,child } from "https://www.gstatic.com/firebasejs/10.8.0/firebase-database.js";
+  
+            const firebaseConfig = {
+                apiKey: "AIzaSyCHHGCUFao3lTgNU6yP0d8nFlkXTetcQFo",
+                authDomain: "webpage-bae00.firebaseapp.com",
+                projectId: "webpage-bae00",
+                storageBucket: "webpage-bae00.appspot.com",
+                messagingSenderId: "130502246937",
+                appId: "1:130502246937:web:9c2bbc291f9ffef9d2a088"
+            };
+
+            // Initialize Firebase
+            const app = initializeApp(firebaseConfig);
+
+            const db = getDatabase(app,"https://webpage-bae00-default-rtdb.asia-southeast1.firebasedatabase.app/");
+
+            document.getElementById("Submit").addEventListener('click',function(e){
+            e.preventDefault();
+            set(ref(db,'user/' +document.getElementById("fname").value),{
+             fname : document.getElementById("fname").value,
+             lname : document.getElementById("lname").value,
+             dob : document.getElementById("dob").value,
+            //  gender:document.getElementById("gender").value,
+             address : document.getElementById("address").value,
+             no : document.getElementById("no").value,
+             mail : document.getElementById("mail").value,
+             msg : document.getElementById("msg").value
+  });
+  })
+
+     </script>
+      <!-- <script src="index.js"></script> -->
 
 </body>
 
@@ -262,7 +304,7 @@ alert("Please use your MMB or Keyboard to surfe the page ;D ")
 
 function button()
 {
-    alert("Thank you for submitting your response, but the backend of our site is not done yet so SORRY we cannot get your feedback . :(")
+    alert("Thank you for submitting your response, I personally will contact soon. THANK YOU for visiting my webpage")
 }
 
 function myFunction()
